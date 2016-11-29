@@ -27,10 +27,16 @@
 				<div class="panel-heading">
 					Login
 				</div>
-				<div class="panel-body" ng-controller="loginCtrl">
-					<input  type="text" placeholder="username" ng-model="userName">
+				<div class="panel-body" ng-controller="loginCtrl" >
+					<div ng-show="beforeLoginShow">
+					<input  type="text" placeholder="username" ng-model="userName"></br>
 					<input type="password" placeholder="password" ng-model="Password"></br>
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" class="btn btn-default" ng-click="loginSubmit()">Submit</button>
+					</div>
+					<div class="panel-body" ng-show="afterLoginShow" >
+						Hello {{name}}
+					</div>
+				</div>
 				</div>
 			</div>
 
@@ -39,12 +45,15 @@
 					Sign-UP
 				</div>
 				<div class="panel-body" ng-controller="signUpCtrl">
-					<input  type="text" placeholder="username" ng-model="userName">
-					<input type="password" placeholder="password" ng-model="Password">
+					<input  type="text" placeholder="username" ng-model="userName"><br>
+					<input type="password" placeholder="password" ng-model="Password"></br>
 					<input type="password" placeholder="conform-password" ng-model="conform_Password"></br>
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" class="btn btn-default" ng-click="signUpSubmit()">Submit</button>
 				</div>
 			</div>
+
+			
+				
 	</div>
   </body>
 </html>
