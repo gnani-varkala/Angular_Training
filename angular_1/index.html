@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Employee List</title>
+		<!-- angular min file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<!-- script file for employeeApp application -->
+		<script src="JS/employee.js"></script>
+		<!-- bootstrap min file -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+  <body ng-app="first_angular_app">
+    <div ng-controller = "employeeCtrl" class = "container-fluid table-responsive">
+      <table class="table table-striped table-responsive ">
+        <tr>
+          <td>Employee_ID</td>
+          <td>Employee_Name</td>
+          <td>Employee_Designation</td>
+          <td>Employee_Experience</td>
+          <td>Employee_salary</td>
+        </tr>
+        <tr ng-repeat="Employee in employees ">
+          <td>{{Employee.ID}}</td>
+          <td>{{Employee.Name}}</td>
+          <td>{{Employee.Designation}}</td>
+          <td>{{Employee.Experience}}</td>
+          <td>{{Employee.Salary}}</td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+</html>
