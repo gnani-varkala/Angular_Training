@@ -1,0 +1,30 @@
+[
+    {
+      "id": "30026",
+      "name": "Gnaneshwari",
+      "designation": "Trainee",
+      "experience": "20Days",
+      "salary": 20000
+    },
+    {
+      "id": "30025",
+      "name": "Santoshi",
+      "designation": "Trainee",
+      "experience": "20Days",
+      "salary": 20000
+    },
+	{
+      "id": "30027",
+      "name": "Raghavendra",
+      "designation": "Trainee",
+      "experience": "20Days",
+      "salary": 20000
+    },
+    {
+      "id": "30033",
+      "name": "Vamsi",
+      "designation": "Trainee",
+      "experience": "20Days",
+      "salary": 20000
+    }
+  ]
