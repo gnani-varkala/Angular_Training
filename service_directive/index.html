@@ -17,8 +17,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 		<style>
 			.card-spacing{
-				margin-top: 5%;
-					margin-left: 5%;
+				margin-bottom: 5%;
+				/*	margin-left: 5%;*/
 				background:grey
 			}
 		</style>
@@ -28,7 +28,7 @@
   <body ng-app="angular_app" >
 		<div class="row"  >
 			<h3 style="text-align:center">Employee Details</h3>
-		  <div class=" col-md-3 col-md-offset-1 col-xs-8 col-xs-offset-2  card-spacing" ng-controller="jsonCtrl" ng-style="style">
+		  <div class=" col-md-4 offset-md-1 col-xs-8 offset-xs-2  card-spacing" ng-controller="jsonCtrl" ng-style="style">
 		    <div class="card card-block" style = "margin-top:5px" ng-repeat="userDetails in jsonDetails" >
 					<my-modal-dir data = 'userdetails'  delete = 'delete($index)'></my-modal-dir>
 				  <h3 class="card-title">Employee-{{$index+1}}</h3>
@@ -39,7 +39,7 @@
 
 
 
-			<div class=" col-md-3 col-md-offset-1 col-xs-8 col-xs-offset-2  card-spacing" ng-controller="addressCtrl">
+			<div class=" col-md-4 offset-md-2 col-xs-8 offset-xs-2  card-spacing" ng-controller="addressCtrl">
 		    <div class="card card-block" style = "margin-top:5px" ng-repeat="addressDetails in addressJSON">
 					<my-modal-dir data = 'addressDetails'  delete = 'delete($index)'></my-modal-dir>
 					<h3 class="card-title">Employee-{{$index+1}}</h3>
