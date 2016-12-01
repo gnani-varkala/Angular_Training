@@ -29,26 +29,25 @@
 		<div class="row"  >
 			<h3 style="text-align:center">Employee Details</h3>
 		  <div class=" col-md-3 col-md-offset-1 col-xs-8 col-xs-offset-2  card-spacing" ng-controller="jsonCtrl" ng-style="style">
-		    <div class="card card-block" style = "margin-top:5px" ng-repeat="userDetails in jsonDetails" ng-mouseenter="select(userDetails)">
-					<my-modal-dir data = 'modalData'  delete = 'delete(modalData)'></my-modal-dir>
+		    <div class="card card-block" style = "margin-top:5px" ng-repeat="userDetails in jsonDetails" >
+					<my-modal-dir data = 'userdetails'  delete = 'delete($index)'></my-modal-dir>
 				  <h3 class="card-title">Employee-{{$index+1}}</h3>
 		      <p class="card-text">Employee-name:{{userDetails.name}}</p>
 					<p class="card-text">Employee-ID:{{userDetails.id}}</p>
 		    </div>
-
 		  </div>
 
+
+
 			<div class=" col-md-3 col-md-offset-1 col-xs-8 col-xs-offset-2  card-spacing" ng-controller="addressCtrl">
-		    <div class="card card-block" style = "margin-top:5px" ng-repeat="addressDetails in addressJSON" ng-mouseenter="select(addressDetails)">
-					<my-modal-dir data = 'modalData'  delete = 'delete(modalData)'></my-modal-dir>
+		    <div class="card card-block" style = "margin-top:5px" ng-repeat="addressDetails in addressJSON">
+					<my-modal-dir data = 'addressDetails'  delete = 'delete($index)'></my-modal-dir>
 					<h3 class="card-title">Employee-{{$index+1}}</h3>
 		      <p class="card-text">Employee-name:{{addressDetails.name}}</p>
 					<p class="card-text">Employee-address:{{addressDetails.location}}</p>
 		    </div>
-
 		  </div>
 
-		<!--	<my-modal-dir data = 'modalData' ng-show = 'modalShow' save = 'saveit(modalData)'></my-modal-dir> -->
 		</div>
   </body>
 </html>
