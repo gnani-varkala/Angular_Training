@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Employee List</title>
+		<!-- angular min file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<!-- script file for employeeApp application -->
+		<script src="JS/controller.js"></script>
+		<script src="JS/service.js"></script>
+		<script src="JS/directive.js"></script>
+		<!-- bootstrap min file -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+		<style>
+			.card-spacing{
+				margin-top: 5%;
+					margin-left: 5%;
+				background:grey
+			}
+		</style>
+
+
+	</head>
+  <body ng-app="angular_app" >
+		<div class="row"  >
+			<h3 style="text-align:center">Employee Details</h3>
+		  <div class=" col-md-3 col-md-offset-1 col-xs-8 col-xs-offset-2  card-spacing" ng-controller="jsonCtrl" ng-style="style">
+		    <div class="card card-block" style = "margin-top:5px" ng-repeat="userDetails in jsonDetails" ng-mouseenter="select(userDetails)">
+					<my-modal-dir data = 'modalData'  delete = 'delete(modalData)'></my-modal-dir>
+				  <h3 class="card-title">Employee-{{$index+1}}</h3>
+		      <p class="card-text">Employee-name:{{userDetails.name}}</p>
+					<p class="card-text">Employee-ID:{{userDetails.id}}</p>
+		    </div>
+
+		  </div>
+
+			<div class=" col-md-3 col-md-offset-1 col-xs-8 col-xs-offset-2  card-spacing" ng-controller="addressCtrl">
+		    <div class="card card-block" style = "margin-top:5px" ng-repeat="addressDetails in addressJSON" ng-mouseenter="select(addressDetails)">
+					<my-modal-dir data = 'modalData'  delete = 'delete(modalData)'></my-modal-dir>
+					<h3 class="card-title">Employee-{{$index+1}}</h3>
+		      <p class="card-text">Employee-name:{{addressDetails.name}}</p>
+					<p class="card-text">Employee-address:{{addressDetails.location}}</p>
+		    </div>
+
+		  </div>
+
+		<!--	<my-modal-dir data = 'modalData' ng-show = 'modalShow' save = 'saveit(modalData)'></my-modal-dir> -->
+		</div>
+  </body>
+</html>
