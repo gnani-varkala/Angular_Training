@@ -1,0 +1,23 @@
+@head: #4CAF50;
+@even: #ccffe6;
+@odd:#e6fff2;
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    tr{
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+      }
+      th {
+          text-align: center;
+          background-color:@head ;
+          color: white;
+      }
+      &:nth-child(even){background-color:@even}
+      &:nth-child(odd){background-color: @odd}
+    }
+
+}

@@ -1,0 +1,49 @@
+
+<html>
+	<head>
+		<title>Employee List</title>
+		<!-- angular min file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<!-- script file for employeeApp application -->
+		<script src="JS/controller.js"></script>
+		<script src="JS/service.js"></script>
+		<!-- bootstrap min file -->
+		<link rel="stylesheet" href="CSS/style.css">
+		<style>
+		.select{
+			background-color: aqua;
+		}
+		</style>
+
+	</head>
+  <body ng-app="angular_app" ng-controller="jsonCtrl">
+		<div>
+			<table>
+				<tr>
+					<th ng-click="sortType ='alphanumeric';reverse = (reverse) ? false : true;color1()" ng-class = "select1" >AlphaNumeric</th>
+					<th ng-click="sortType ='numeric';reverse = (reverse) ? false : true;color2()" ng-class = "select2" >Numeric</th>
+					<th ng-click="sortType ='animal';reverse = (reverse) ? false : true;color3()"  ng-class = "select3">Animals</th>
+					<th ng-click="sortType = 'sites';reverse = (reverse) ? false : true;color4()" ng-class = "select4">Sites</th>
+				</tr>
+				<tr>
+					<td><input type="text"  ng-model='alphanum'></td>
+					<td><input type='text' ng-model='nume'></td>
+					<td><input type="text"  ng-model='anim'></td>
+					<td><input type="text"  ng-model='site'></td>
+				</tr>
+			  <tr ng-repeat="details in jsonDetails| orderBy:sortType:reverse | filter:{alphanumeric:alphanum,numeric:nume,animal:anim,sites:site}">
+					<td ng-class="select1">{{details.alphanumeric}}</td>
+					<td ng-class="select2">{{details.numeric}}</td>
+					<td ng-class="select3">{{details.animal}}</td>
+					<td ng-class="select4">{{details.sites}}</td>
+			  </tr>
+				<tr>
+					<th>AlphaNumeric</th>
+					<th>Numeric</th>
+					<th>Animals</th>
+					<th>Sites</th>
+				</tr>
+			</table>
+		</div>
+  </body>
+</html>
