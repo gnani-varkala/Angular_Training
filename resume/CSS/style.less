@@ -1,0 +1,62 @@
+@backgroundColor :transparent;
+
+.second_div{
+  border: 10px solid rgba(3, 19, 3, 1);
+  border-top: none!important;
+  margin-top: 0px!important;
+}
+.header{
+  text-align: center;
+}
+
+.border_arrange{
+  border: 10px solid rgba(30, 70, 30, 0.81);
+}
+
+.main_div{
+  &:extend(.border_arrange);
+  border-bottom: none!important;
+  margin-bottom: 0px!important;
+  .image{
+    background:@backgroundColor;
+    &:extend(.border_arrange);
+    float:left;
+    height:45%;
+    .img-thumbnail{
+      height:100%;
+      width:100%;
+    }
+  }
+  .card_div{
+    background:@backgroundColor;
+    float:right;
+    height:45%;
+    .header
+  }
+}
+
+table{
+    width: 100%;
+    tr{
+       td {
+            padding: 8px 8px 8px 8px;
+      }
+    }
+
+}
+
+
+dl{
+  dt{
+    margin-left:5%;
+  }
+  dd{
+    margin-left:10%;
+    .list1{
+      float:left;
+    }
+    .list2{
+      margin-left: 50%;
+    }
+  }
+}
