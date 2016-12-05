@@ -10,15 +10,16 @@
 		<!-- bootstrap min file -->
 		<link rel="stylesheet" href="CSS/style.css">
 
+
 	</head>
   <body ng-app="angular_app" ng-controller="jsonCtrl">
 		<div>
 			<table>
 				<tr>
-					<th ng-click="sortType ='alphanumeric';reverse = (reverse) ? false : true;color1()" ng-class = "select1" >AlphaNumeric</th>
-					<th ng-click="sortType ='numeric';reverse = (reverse) ? false : true;color2()" ng-class = "select2" >Numeric</th>
-					<th ng-click="sortType ='animal';reverse = (reverse) ? false : true;color3()"  ng-class = "select3">Animals</th>
-					<th ng-click="sortType = 'sites';reverse = (reverse) ? false : true;color4()" ng-class = "select4">Sites</th>
+					<th ng-click="sortType ='alphanumeric';reverse = (reverse) ? false : true;color1()" >AlphaNumeric</th>
+					<th ng-click="sortType ='numeric';reverse = (reverse) ? false : true;color2()" >Numeric</th>
+					<th ng-click="sortType ='animal';reverse = (reverse) ? false : true;color3()"  >Animals</th>
+					<th ng-click="sortType = 'sites';reverse = (reverse) ? false : true;color4()" >Sites</th>
 				</tr>
 				<tr>
 					<td><input type="text"  ng-model='alphanum'></td>
