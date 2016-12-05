@@ -21,6 +21,12 @@
       $scope.select2 = {select:false};
       $scope.select3 = {select:false};
       $scope.select4 = {select:false};
+
+      $scope.selectedRow = null;  // initialize our variable to null
+      $scope.setClickedRow = function(index){  //function that sets the value of selectedRow to current index
+         $scope.selectedRow = index;
+      }
+
       $scope.color1 = function(e){
         var x = event.target;
         console.log(x);

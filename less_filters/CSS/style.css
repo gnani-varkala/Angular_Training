@@ -18,3 +18,10 @@ table tr:nth-child(even) {
 table tr:nth-child(odd) {
   background-color: #e6fff2;
 }
+.select {
+  background-color: aqua;
+}
+.selected {
+  color: red;
+  font-weight: bold;
+}

@@ -9,11 +9,6 @@
 		<script src="JS/service.js"></script>
 		<!-- bootstrap min file -->
 		<link rel="stylesheet" href="CSS/style.css">
-		<style>
-		.select{
-			background-color: aqua;
-		}
-		</style>
 
 	</head>
   <body ng-app="angular_app" ng-controller="jsonCtrl">
@@ -31,7 +26,7 @@
 					<td><input type="text"  ng-model='anim'></td>
 					<td><input type="text"  ng-model='site'></td>
 				</tr>
-			  <tr ng-repeat="details in jsonDetails| orderBy:sortType:reverse | filter:{alphanumeric:alphanum,numeric:nume,animal:anim,sites:site}">
+			  <tr ng-repeat="details in jsonDetails| orderBy:sortType:reverse | filter:{alphanumeric:alphanum,numeric:nume,animal:anim,sites:site}"  ng-class="{'selected':$index == selectedRow}" ng-mouseover="setClickedRow($index)">
 					<td ng-class="select1">{{details.alphanumeric}}</td>
 					<td ng-class="select2">{{details.numeric}}</td>
 					<td ng-class="select3">{{details.animal}}</td>
