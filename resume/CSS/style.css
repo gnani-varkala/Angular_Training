@@ -18,7 +18,7 @@
 .main_div .image {
   background: transparent;
   float: left;
-  height: 45%;
+  height: 35%;
 }
 .main_div .image .img-thumbnail {
   height: 100%;
@@ -27,7 +27,6 @@
 .main_div .card_div {
   background: transparent;
   float: right;
-  height: 45%;
   text-align: center;
 }
 table {
