@@ -1,4 +1,4 @@
-<div class="col-md-12 col-xs-12">
+<div class="col-md-12 col-xs-12 nav-fix">
 <div class="jumbotron">
   <h1 class="display-3">XML</h1>
   <section>Like HTML, XML is a plain text data format with structural tagging. Unlike HTML, which has a predefined set of tags that represent the structuring and rendering facilities of modern web browsers, XML has no pre-defined document tags. Instead, XML allows applications to define their own sets of tags for use according to the XML syntactical rules. Using XML can be very simple or very complex, depending on how many of the fancy features you try to use. Ganymede uses fairly simple XML, and this page is intended to present the most basic facts about XML that you will need to know to write syntactically valid XML files that Ganymede can handle.
@@ -17,7 +17,7 @@
 <br>      < element2>
 <br>        </ element1>
 <br>      </ element2>
-	
+
 <br>is an invalid XML sequence, as the element2 and element1 structural elements are intermingled.
 <br>
 <br>In contrast,
@@ -33,7 +33,7 @@
 <br>        < element1>
 <br>          < element2/>
 <br>        </ element1>
-<br>	
+<br>
 <br>where the trailing slash in the element2 element indicates that there will be no matching close tag to come along. At any other time an element open tag (<element>) is seen, a compliant XML parser will expect and demand to see the matching close tag (</element>) for that element before it sees the close tag for any elements higher up in the document structure.
 <br>
 <br>In XML, all XML documents contain a single element (the Document Element, in XML lingo) which contains in turn any other elements and character data. The start tag for the document element will generally be the first thing in an XML file's content proper, and the matching close tag for the document element will be the last thing in the XML file. For this reason, the following XML fragment could not be an entire XML file:
@@ -41,17 +41,17 @@
 <br>In XML, all attribute data must be quoted, as in
 <br>
 <br>          < object label="labeldata">
-<br>        
+<br>
 <br>The following is illegal:
 <br>
 <br>          < object label=labeldata>
-<br>        
+<br>
 <br>All possible characters are legal within the double quotes surrounding an attribute's value except the '&' character and the double quotation mark itself. If you need to include a double quotation mark in an attribute's data field, you have to use &quot;
 <br>
 <br>For example, if you wanted the string 'He said "hi" & I waved back.' in an XML tag attribute, you would have to do it this way:
 <br>
 <br>          <sentence text="He said &quot;hi&quot; &amp; I waved back."/>
- <br>       
+ <br>
 <br>Newlines and other whitespace are explicitly acceptable within the quoted value of an attribute.
 <br>
 <br>Likewise, if you want to include the '<', '>', or '&' characters anywhere in the body of an XML document, for anything other than tag or special character definitions, you need to use '&lt;', '&gt;', and '&amp;' instead, just as with HTML..</section>
