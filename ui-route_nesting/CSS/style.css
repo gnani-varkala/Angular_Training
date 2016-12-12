@@ -84,6 +84,9 @@
     border: 5px solid white;
     margin: 5%;
   }
+  .body {
+    font-size: 30px;
+  }
 }
 .jumbotron {
   background: #f6f7f7;
@@ -107,4 +110,7 @@
 }
 .head-margin {
   margin-top: 5px;
+}
+.navbar-toggleable-md {
+  padding: 10px 10px;
 }
