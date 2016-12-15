@@ -1,0 +1,123 @@
+
+<html ng-app="boxApp">
+	<head>
+		<title>Box-example</title>
+		<!-- angular min file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+		<script src="JS/box-example.js"></script>
+		<script src="JS/directive.js"></script>
+		<style>
+			.new-color{
+				background: black;
+				z-index: 2;
+			}
+			.jumbotron{
+				height: 200px;
+				overflow-y: scroll;
+				border: 3px solid black;
+				background: wheat;
+			}
+			.card{
+				background: wheat;
+			}
+		</style>
+	</head>
+  <body ng-controller="boxExample" arrow-append>
+	<div >
+		<h3>Click on a particular div and press arrow keys.The div will change it's focus</h3>
+		<div class="row">
+		  <div class="col-md-2 col-sm-2 col-xs-2 offset-md-1 offset-xs-1" id="1" ng-click="enter($event)" >
+		    <div class="card card-block" >
+		      <h3 class="card-title">1</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="2"  ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">2</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="3" ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">3</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="4" ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">4</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="5" ng-click="enter($event)" >
+		    <div class="card card-block">
+		      <h3 class="card-title">5</h3>
+		    </div>
+			</div>
+	  </div>
+		<div class="row">
+		  <div class="col-md-2 col-sm-2 col-xs-2 offset-md-1 offset-xs-1" id="6" ng-click="enter($event)" >
+		    <div class="card card-block">
+		      <h3 class="card-title">6</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="7" ng-click="enter($event)" >
+		    <div class="card card-block">
+		      <h3 class="card-title">7</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="8"  ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">8</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="9" ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">9</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="10" ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">10</h3>
+		    </div>
+			</div>
+	  </div>
+		<div class="row">
+		  <div class="col-md-2 col-sm-2 col-xs-2 offset-md-1 offset-xs-1" id="11" ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">11</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="12" ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">12</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="13" ng-click="enter($event)" >
+		    <div class="card card-block">
+		      <h3 class="card-title">13</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="14" ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">14</h3>
+		    </div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-2 " id="15"  ng-click="enter($event)">
+		    <div class="card card-block">
+		      <h3 class="card-title">15</h3>
+		    </div>
+			</div>
+	  </div>
+	<div class="row">
+		<div class="jumbotron jumbotron-fluid col-md-8 offset-md-2">
+		  <div class="container">
+				<p class="lead"> Keys Pressed</p>
+		    <p class="lead">{{result}}</p>
+		  </div>
+		</div>
+	</div>
+</div>
+  </body>
+</html>
