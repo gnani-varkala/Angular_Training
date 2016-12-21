@@ -9,30 +9,48 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 		<script src="JS/controller.js"></script>
-		<style>
-		.new-color{
-				background: black;
-				z-index: 2;
-				color: white;
-			}
-		.cell{
-				text-align: center;
-				width : 100px;
-				height: 100px;
-				padding : 40px 40px;
-				border: thin solid black;
-				}
-		</style>
+		<script src="JS/service.js"></script>
+		<link rel="stylesheet" href="CSS/style.css">
 	</head>
   <body ng-controller="wordSearch">
-		<div  class="grid col-md-12">
-			<div class=" col-md-8 row" ng-repeat="eachRow in alphabetsArray track by $index" >
-					<button class= "col-xs-2 cell" ng-repeat="alphabet in eachRow track by $index" ng-click="element($event,$parent.$index,$index,alphabet) " select id="{{$parent.$index}}{{$index}}" >{{alphabet}}</button>
-			</div>
-			<button ng-click="submit()">Guess the word</button>
-			<p>score is :{{count}}</p>
-			<p>Time Limit:{{timer}}</p>
-			<div class ="col-md-2"  ng-repeat="input in inputArray track by $index" >{{input}}</div>
+		<h2>WORD SEARCH</h2>
+		<div class="col-xs-12 col-md-12 main-div">
+			<p>find the below word in the boxes by click on them</p>
+			<p>After selecting all the letters click on "find the word" button or press enter</p>
 		</div>
+		<div  class="container">
+			<div class = 'col-md-9'>
+			<div class="row" ng-repeat="eachRow in alphabetsArray track by $index" >
+					<button class= "col-xs-2 cell" ng-repeat="alphabet in eachRow track by $index" ng-click="element($event,$parent.$index,$index,alphabet) " select id="{{$parent.$index}}{{$index}}"  ng-keyup="$event.keyCode === 13 && submit()">{{alphabet}}</button>
+			</div>
+			</div>
+			<div class= 'col-md-3'>
+			<button ng-click="submit()" >Find the word</button>
+			<p>score is :{{count}}</p>
+			<p>Time taken:{{timer}}</p>
+			<div class ="col-md-12 box">
+			<div class="inputClass"  ng-repeat="input in inputArray track by $index"  id="00{{$index}}">{{input}}</div>
+		</div>
+	</div>
+		</div>
+		<div class="modal fade" id="myModal">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title">YOU HAVE COMPLETED THE LEVEL</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>Your score is</p>
+						<input value="{{count}}" ng-disabled="true">
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
   </body>
 </html>

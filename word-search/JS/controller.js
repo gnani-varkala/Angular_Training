@@ -10,13 +10,15 @@
         .module('wordSearchApp')
         .controller('wordSearch', wordSearch);
 
-    wordSearch.$inject = ['$scope',"$interval"];
-    function wordSearch($scope,$interval){
-      $scope.alphabetsArray = [["g","p","a","n","d","a"],["s","q","e","q","r","g"],["h","b","u","e","a","l"],
-                    ["a","i","l","k","i","o"],["r","r","b","r","n","v"],["k","d","v","w","m","e"]];
-      $scope.inputArray = ["blue","bird","rain","panda","glove","shark"];
-      $scope.myDisable=false;
-      $scope.timer = 30;
+    wordSearch.$inject = ['$scope',"jsonService","$interval"];
+    function wordSearch($scope,jsonService,$interval){
+      $scope.alphabetsArray =[];
+      $scope.inputArray=[];
+      jsonService.myJson('JSON/level1.json').then(function(data){
+        $scope.alphabetsArray = data.alphabetArray;
+        $scope.inputArray =data.inputArray;
+      });
+      $scope.timer =0;
       var itemToSearch = [];
       var rowIndex;
       var colIndex;
@@ -27,13 +29,13 @@
       $scope.element = function(event,col,index2,alphabet){
           var target = event.target.id ;
           if(itemToSearch.length == 0){
+
             itemToSearch.push({"alphabet":alphabet,"id":target});
             $('#'+target).addClass('new-color');
             rowIndex = col;
             colIndex = index2;
           }
           else if(itemToSearch.length == 1){
-            //$scope.myDisable=true;
             if((col == (rowIndex-1)&&index2 == colIndex )||( col == (rowIndex+1)&&index2 == colIndex)||(col == rowIndex&&index2 == (colIndex-1))||(col == (rowIndex)&&index2 == (colIndex+1))||(col == (rowIndex-1)&&index2 == (colIndex-1))||
             (col == (rowIndex+1)&&index2 == (colIndex+1))||(col == (rowIndex-1)&&index2 == (colIndex+1))||
             (col == (rowIndex+1)&&index2 == (colIndex-1))){
@@ -108,17 +110,21 @@
               secondCol = index2;
             }
           }
-          console.log(rowIndex +""+colIndex+""+secondRow+""+secondCol)
-          console.log(itemToSearch);
       }
+      var timer = $interval(function(){
+        $scope.timer +=1 ;
+      },1000);
       $scope.submit=function(){
         var word="";
         var flag=false;
+        var index="";
         for(var i=0;i<itemToSearch.length;i++){
           word +=itemToSearch[i].alphabet;
         }
         for(var i=0;i<$scope.inputArray.length;i++){
           if(word ==$scope.inputArray[i] ){
+            index =i;
+            $('#00'+index).addClass('new-color');
             flag = true;
           }
         }
@@ -131,21 +137,20 @@
           }
         }
         if($scope.inputArray.length == $scope.count){
-          alert("Game completed successfiy; Your score:"+$scope.count);
+          $("#myModal").modal('show');
           $(" .cell").removeClass("new-color");
-          $scope.count = 0;
-          $scope.timer =30;
+          $(" .inputClass").removeClass("new-color");
         }
+        $("#myModal").on("hide.bs.modal", function () {
+          $scope.count = 0;
+          jsonService.myJson('JSON/level2.json').then(function(data){
+            $scope.alphabetsArray = data.alphabetArray;
+            $scope.inputArray =data.inputArray;
+              });
+            $scope.timer =0;
+        });
         itemToSearch = [];
       }
-      $interval(function(){
-        $scope.timer--;
-        if($scope.timer ==0){
-          $scope.count = 0;
-          $(" .cell").removeClass("new-color");
-          $scope.timer =30;
-          alert("Game over");
-        }
-      },1000)
+
     };
 })();
