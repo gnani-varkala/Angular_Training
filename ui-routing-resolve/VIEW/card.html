@@ -1,0 +1,10 @@
+
+<div ng-repeat="cardImage in myJson" style="margin-top:5%">
+    <div class="card col-md-4  col-sm-10 offset-sm-1 col-xs-10 offset-xs-1" >
+      <h2 style="text-align:center">{{cardImage.id| uppercase}}</h2>
+    <img class="card-img-top" ng-src='{{cardImage.image}}' alt="Card image cap">
+    <div class="card-block">
+      <a ui-sref="message({id:cardImage.id})" class="btn btn-primary">click here</a>
+    </div>
+  </div>
+</div>
