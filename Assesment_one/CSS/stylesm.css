@@ -1,0 +1,70 @@
+@media screen and (max-width: 900px) {
+  .logo {
+    margin-left: 10px !important;
+  }
+  .main-div {
+    float: right;
+    width: 600px;
+    height: 97px;
+  }
+  .input-box {
+    height: 42px;
+    width: 259px;
+  }
+  .input-field {
+    width: 150px;
+  }
+  .icon-span {
+    padding-top: 7px;
+    margin-top: -30px;
+  }
+  .small {
+    font-size: 12px;
+  }
+  .large {
+    font-size: 20px;
+  }
+  table {
+    width: 100%;
+  }
+  table th {
+    font-size: 12px;
+    font-family: FiraSans-Regular;
+  }
+  table tr td {
+    font-size: 12px;
+  }
+  .new-button {
+    width: 112px;
+    text-align: left;
+    padding: 5px 5px;
+  }
+  .downIcon {
+    float: right;
+  }
+  h6 {
+    font-size: 12px;
+    margin-top: 5px;
+    opacity: 0.6;
+  }
+  h4 {
+    font-size: 16px;
+    opacity: 0.7;
+  }
+}
+@media screen and (max-width: 500px) {
+  .new-button {
+    width: 75px;
+    text-align: left;
+    padding: 5px 5px;
+  }
+  h6 {
+    font-size: 10px;
+    margin-top: 5px;
+    opacity: 0.6;
+  }
+  h4 {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,65 @@
+@media screen and (min-width: 1220px) {
+  * {
+    font-family: FiraSans-Book;
+    font-size: 16px;
+  }
+  .main-div {
+    float: right;
+    width: 700px;
+    height: 97px;
+  }
+  .input-box {
+    height: 42px;
+    width: 359px;
+  }
+  .input-field {
+    heigth: 42px;
+    width: 250px;
+  }
+  .icon-span {
+    margin-top: -30px;
+  }
+  .small {
+    font-size: 12px;
+  }
+  .large {
+    font-size: 20px;
+  }
+  table th {
+    font-size: 16px;
+    font-family: FiraSans-Regular;
+  }
+  table tr td {
+    font-size: 16px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+  .new-button {
+    width: 112px;
+    text-align: left;
+    padding: 5px 8px !important;
+  }
+  .buttonIcon {
+    margin-left: -11px !important;
+    font-size: 14px !important;
+  }
+  .downIcon {
+    float: right;
+  }
+  #table .col-md-12 {
+    border-top: 1px solid #dcdcdc;
+  }
+  #table .col-md-12,
+  #table .col-md-3,
+  #table .col-md-2 {
+    padding: 10px 0px 5px 0px ;
+    font-size: 18px !important;
+  }
+  .head {
+    font-family: FiraSans-Regular;
+  }
+}
+.front-position{
+  height: 84%;
+}

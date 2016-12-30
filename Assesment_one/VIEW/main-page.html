@@ -1,0 +1,75 @@
+<div class="back-position">
+<my-nav-dir></my-nav-dir>
+<div class="container-fluid" id="table">
+  <!-- outer table -->
+  <!-- table heading -->
+  <div class=" col-md-12 col-lg-12 hidden-sm-down ">
+    <div class="col-md-3 col-lg-3 hidden-sm-down head">Commodity</div>
+    <div class="col-md-3 col-lg-3 hidden-sm-down head">Total Acres</div>
+    <div class="col-md-2 col-lg-2 hidden-sm-down head"># of Fields</div>
+    <div class="col-md-2 col-lg-2 hidden-sm-down head text-md-center text-lg-center">Yield</div>
+    <div class="col-md-2 col-lg-2 hidden-sm-down head text-md-right text-lg-center"  >% of Target</div>
+  </div>
+  <!-- table data -->
+  <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="float:right" ng-repeat="myNewJson in myJson track by $index">
+    <div class="col-xs-6 col-sm-6 hidden-md-up head">Commodity</div>
+    <div class="col-md-3 col-lg-3 col-xs-6 col-sm-6 "><i ng-click="show = !show" ng-class="{'fa fa-plus-square-o': !show, 'fa fa-minus-square-o': show }" aria-hidden="true" style="margin-right:7px"></i>{{myNewJson.commodity}}</div>
+    <div class="col-xs-6 col-sm-6 hidden-md-up head">Total Acres</div>
+    <div class="col-md-3 col-lg-3 col-xs-6 col-sm-6">{{myNewJson.totalAcres}}</div>
+    <div class="col-xs-6 col-sm-6 hidden-md-up head"># of Fields</div>
+    <div class="col-md-2 col-lg-2 col-xs-6 col-sm-6">{{myNewJson.noOffields}}</div>
+    <div class="col-xs-6 col-sm-6 col-xs-6 col-sm-6 hidden-md-up head">Yield</div>
+    <div class="col-md-2 col-lg-2 col-xs-6 col-sm-6 text-md-center text-md-center">{{myNewJson.yields}}</div>
+    <div class="col-xs-6 col-sm-6 col-xs-6 col-sm-6 hidden-md-up head">% of Target</div>
+    <div class="col-md-2 col-lg-2 col-xs-6 col-sm-6 text-md-center text-md-center"><i class='fa fa-check' aria-hidden='true' style="color: #85b84b;"></i></div>
+    <!-- Inner table -->
+    <div class=" col-md-12 table-responsive" style="padding:0px" ng-show="show">
+      <table class="table" >
+      <thead>
+        <tr style="background: #dedede !important">
+          <th class="head">Fields</th>
+          <th class="head">Acres</th>
+          <th class="head">Commodity/Variety</th>
+          <th class="head">Forecast Date</th>
+          <th class="head">Forecast Target</th>
+          <th class="head">DTH</th>
+          <th class="head">Harvest Date</th>
+          <th class="head">Actual</th>
+          <th class="head">Tag</th>
+          <th class="head">% of Target</th>
+          <th class="head"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="newJson in myNewJson.details track by $index">
+            <td style="color:#43a0d9">{{newJson.fields}}</td>
+            <td>{{newJson.acres}}</td>
+            <td>{{newJson.commodityvariety}}</td>
+            <td>{{newJson.forecastDate}}</td>
+            <td>{{newJson.forecastTarget}}</td>
+            <td>{{newJson.DTH}}</td>
+            <td>{{newJson.harvestDate}}</td>
+            <td>{{newJson.actual}}</td>
+            <td>{{newJson.tag}}</td>
+            <td>{{newJson.target}}%</td>
+            <td><i class="fa fa-comment" aria-hidden="true"></i></td>
+          </tr>
+		  <tr>
+            <td>{{myNewJson.aggregate}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{myNewJson.forecastSum}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{myNewJson.targetSum}}%</td>
+            <td></td>
+          </tr>
+      </tbody>
+    </table> </div>
+  </div>
+</div>
+</div>
+<ui-view></ui-view>

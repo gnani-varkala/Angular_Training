@@ -1,0 +1,232 @@
+@font-face {
+  font-family: FiraSans-Book;
+  src: url("fira-sans/FiraSans-Book.ttf") format('truetype');
+  color: black;
+}
+@font-face {
+  font-family: FiraSans-Regular;
+  src: url("fira-sans/FiraSans-Regular.ttf") format('truetype');
+  color: black;
+}
+* {
+  font-family: FiraSans-Book;
+  font-size: 16px;
+}
+.row {
+  padding: 5px !important;
+}
+.top-log {
+  height: 97px !important;
+  width: 100% !important;
+  background: white !important;
+}
+.navbar-nav {
+  float: right;
+}
+.main-div {
+  float: right;
+  width: 500px;
+  height: 97px;
+}
+.input-box {
+  border: 1px solid #dcdcdc;
+  height: 42px;
+  width: 258px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.input-field {
+  background: transparent;
+  border: none;
+  heigth: 42px;
+  width: 150px;
+}
+.input-field:active {
+  border: none;
+}
+.icon-span {
+  padding-top: 7px;
+  margin-top: -30px;
+  opacity: 0.5;
+  float: right;
+  height: 18px;
+  width: 20px;
+}
+#circle {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 10px ;
+  margin-right: 10px;
+  width: 47px;
+  height: 47px;
+  text-align: center;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: #d8d8d8;
+}
+.user-span {
+  margin-top: 5px;
+  opacity: 0.8;
+  font-size: 30px;
+}
+.vertical-eclipse {
+  font-size: 26px;
+  margin-top: 35px;
+}
+.second-nav {
+  margin: 0px !important;
+  height: 63px !important;
+  width: 100% !important;
+  background: #f3f3f3!important;
+  padding: 0px 0px !important;
+}
+.menuIcon {
+  height: 63px;
+  width: 66px;
+  color: white;
+  background: #85b84b;
+  font-size: 26px;
+  text-align: center;
+  padding-top: 17px;
+}
+.second-circle {
+  border-radius: 100%;
+  position: absolute;
+  margin-left: 60% !important;
+  margin-top: -35px !important;
+  margin-bottom: 5px;
+  width: 57px;
+  height: 57px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #46a8e3;
+}
+.plusIcon {
+  font-size: 30px !important;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  z-index: 100;
+}
+.small {
+  opacity: 0.5;
+  font-size: 12px;
+  padding: 0px 0px !important;
+  margin: 0px 0px !important;
+}
+.large {
+  font-size: 20px;
+  padding: 0px 0px !important;
+  margin: 0px 0px !important;
+}
+.navbar-toggler {
+  height: 63px !important;
+  width: 67px !important;
+  color: white !important;
+  background: #5fbd2f;
+  margin-left: 0px !important;
+}
+.new-nav {
+  float: left !important;
+}
+.fa-chevron-circle-down {
+  float: right;
+  color: white;
+}
+.third-nav {
+  margin: 0px 5px 0px 5px;
+  padding-left: 0px;
+  background: white;
+}
+table th {
+  font-size: 12px;
+  font-family: FiraSans-Regular;
+}
+table tr {
+  height: 30px;
+  border: none !important;
+  background: #f4f4f4 !important;
+}
+table tr td {
+  font-size: 12px;
+  font-weight: none !important;
+  border-top: 1px solid #dcdcdc !important;
+}
+thead {
+  background: #dedede !important;
+}
+.btn-primary {
+  background: #43a0d9;
+  height: 35px;
+  width: 35px;
+  border: #43a0d9;
+  border-radius: 0px;
+  padding-right: 5px;
+}
+.new-button {
+  width: 112px;
+  text-align: left;
+  padding: 5px 8px !important;
+}
+.downIcon {
+  float: right;
+}
+.buttonIcon {
+  margin-left: -11px !important;
+  font-size: 14px !important;
+}
+h6 {
+  margin-top: 5px;
+  opacity: 0.6;
+}
+h4 {
+  opacity: 0.7;
+}
+.table-class {
+  width: 180px;
+}
+#table .col-md-12 {
+  border-top: 1px solid #dcdcdc;
+}
+#table .col-md-12,
+#table .col-md-3,
+#table .col-md-2 {
+  padding: 10px 0px 5px 0px ;
+  font-size: 18px !important;
+}
+.head {
+  font-family: FiraSans-Regular;
+}
+.nav-color{
+  color: white;
+  background: #85b84b;
+  height:100%
+}
+.title{
+  padding:10px 5px 5px 5px;
+  border-bottom: 1px solid white;
+}
+.new-menuIcon{
+  color:white;
+  font-size:20px;
+
+}
+.menu{
+  font-size:25px;
+}
+
+.back-position{
+  position:fixed;
+  width:100%;
+}
+
+.front-position{
+  position:absolute;width:100%;
+  height:81%;
+  background:rgba(0,0,0,0.4);
+}
